@@ -1,0 +1,45 @@
+<div style="margin-bottom: 20px;">
+
+  <label><strong>Is this a software update?</strong></label><br>
+
+  <label>
+    <input type="radio" name="IsUpdate" value="Yes" onclick="showUpdateBox()"> Yes
+  </label><br>
+
+  <label>
+    <input type="radio" name="IsUpdate" value="No" onclick="hideUpdateBox()" checked> No
+  </label>
+
+  <!-- Hidden Update Info Box -->
+  <div id="update-box" style="
+      display: none;
+      margin-top: 15px;
+      padding: 15px;
+      border-left: 5px solid #512698;
+      background: #f4f0ff;
+      border-radius: 4px;
+  ">
+
+      <p style="margin: 0 0 10px 0;">
+        <strong>You have indicated this is a software update request.</strong><br>
+        If the existing version is installed on your device and you require a newer one,
+        you may proceed directly to submit this request.
+      </p>
+
+      <!-- Dedicated submit button -->
+      <button type="submit" 
+              style="background: #512698; color: white; padding: 8px 15px; border: none; border-radius: 4px;">
+        Submit Update Request
+      </button>
+  </div>
+
+</div>
+
+<script>
+function showUpdateBox() {
+    document.getElementById('update-box').style.display = 'block';
+}
+function hideUpdateBox() {
+    document.getElementById('update-box').style.display = 'none';
+}
+</script>
